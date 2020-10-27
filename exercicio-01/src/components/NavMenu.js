@@ -2,9 +2,9 @@
 import React from "react";
 
 export const NavMenu = (props) => (
-    <ul class="navbar-nav mr-auto">
+    <ul className="navbar-nav mr-auto">
         {props.items.map(item => (
-            <li className="nav-item">
+            <li key={item.key} className="nav-item">
                 <a className="nav-link" href={item.link}>{item.title}</a>
             </li>
         ))}
