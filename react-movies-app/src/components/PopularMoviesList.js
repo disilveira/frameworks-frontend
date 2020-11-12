@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { MoviesService } from "../api/MoviesService";
 
 export const PopularMoviesList = () => {
@@ -23,7 +24,7 @@ export const PopularMoviesList = () => {
               <div className="card-body">
                 <h5 className="card-title">{m.title}</h5>
                 <p className="card-text">{m.release_date}</p>
-                <a href={ 'movie/' + m.id} className="btn btn-primary btn-block">Movie Details</a>
+                <Link to={ 'movie/' + m.id} className="btn btn-primary btn-block">Movie Details</Link>
               </div>
           </div>
         </div>
