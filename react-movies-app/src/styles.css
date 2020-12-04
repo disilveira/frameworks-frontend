@@ -1,4 +1,7 @@
 .App {
   font-family: sans-serif;
-  text-align: center;
+}
+
+.jumbotron {
+  text-shadow: 1px 1px 2px black; 
 }
