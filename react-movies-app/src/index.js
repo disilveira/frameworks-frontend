@@ -6,8 +6,6 @@ import App from "./App";
 import { NavBar } from "./components/NavBar";
 
 import { Provider } from "react-redux";
-import { createStore } from "redux";
-import { reducers } from "./reducers";
 
 import { PersistGate } from 'redux-persist/integration/react';
 
