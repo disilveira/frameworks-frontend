@@ -12,6 +12,7 @@ import { reducers } from "./reducers";
 import { PersistGate } from 'redux-persist/integration/react';
 
 import configureStore from './store';
+import { MainFooter } from "./components/MainFooter";
 const store = configureStore();
 
 
@@ -28,6 +29,7 @@ ReactDOM.render(
         <PersistGate loading={null} persistor={store.persistor}>
             <BrowserRouter>
                 <App />
+                <MainFooter />
             </BrowserRouter>
         </PersistGate>
     </Provider>,

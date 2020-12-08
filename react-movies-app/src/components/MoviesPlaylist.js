@@ -47,7 +47,7 @@ export const MoviesPlaylist = () => {
                 {(playListReducer.movies.indexOf(m.id) === -1) ?
                   <button className="btn btn-success btn-block" onClick={() => addInPlaylist(m.id)}>Add to Playlist</button>
                   :
-                  <button className="btn btn-danger btn-block" onClick={() => removeFromPlaylist(m.id)}>Remove from Playlist</button>
+                  <button className="btn btn-danger btn-block" onClick={() => removeFromPlaylist(m.id)}>Del from Playlist</button>
                 }
               </div>
             </div>
