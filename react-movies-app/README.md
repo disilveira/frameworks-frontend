@@ -6,7 +6,7 @@ Este repositório contém as atividades desenvolvidas nas aulas da disciplina de
 
 Clone o repositório e execute os comando abaixo
 
-´´´
+```
 npm install
 npm start
-´´´
+```
