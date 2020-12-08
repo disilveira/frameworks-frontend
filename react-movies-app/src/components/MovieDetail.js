@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { MoviesService } from "../api/MoviesService";
 
 import "../styles.css";
+import { MainMenu } from "./MainMenu";
 
 export const MovieDetail = (props) => {
     const [movie, setMovie] = useState({ data: [] });
@@ -18,7 +19,7 @@ export const MovieDetail = (props) => {
 
     return (
         <>
-            <br />
+            <MainMenu />
             <div className="jumbotron" style={{backgroundImage: `url('http://image.tmdb.org/t/p/w1920_and_h800_multi_faces${movie.data.backdrop_path}')`}}>
 
                 <div className="row" style={{ paddingTop: '10px' }}>
@@ -34,9 +35,6 @@ export const MovieDetail = (props) => {
                         <p className="lead" style={{ color: '#ffffff' }}>{movie.data.overview}</p>
                         <hr className="my-4" />
                         <p style={{ color: '#ffffff' }}>Average: {movie.data.vote_average}</p>
-                        <p className="lead">
-                            <Link to="/" className="btn btn-primary btn-lg" role="button">Back to Home</Link>
-                        </p>
                     </div>
                 </div>
             </div>

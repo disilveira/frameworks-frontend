@@ -4,6 +4,7 @@ import { MoviesService } from "../api/MoviesService";
 
 import { addToPlaylist } from '../actions/playlistAction';
 import { useDispatch, useSelector } from 'react-redux';
+import { MainMenu } from "./MainMenu";
 
 export const MoviesList = () => {
   const [movies, setMovies] = useState({ data: { results: [] } });
@@ -36,6 +37,7 @@ export const MoviesList = () => {
 
   return (
     <>
+      <MainMenu />
       <div className="row" style={{ paddingTop: '10px' }}>
         {movies.data.results.map((m) => (
           <div key={m.id} className="col-sm-2" style={{ paddingBottom: '10px' }}>
