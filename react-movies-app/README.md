@@ -11,3 +11,7 @@ Clone o repositório e execute os comando abaixo
 npm install
 npm start
 ```
+
+## Demonstração
+
+<a href="https://react-movies-app-psi.vercel.app/" target="_blank">https://react-movies-app-psi.vercel.app/</a>
