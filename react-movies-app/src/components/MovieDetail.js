@@ -15,7 +15,7 @@ export const MovieDetail = (props) => {
         }
 
         requestMovieDetail();
-    }, []);
+    }, [props]);
 
     return (
         <>
