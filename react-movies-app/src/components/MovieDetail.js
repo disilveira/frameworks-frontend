@@ -7,14 +7,15 @@ import { MainMenu } from "./MainMenu";
 export const MovieDetail = (props) => {
     const [movie, setMovie] = useState({ data: [] });
 
-    const requestMovieDetail = async () => {
-        const movieDetailResult = await MoviesService.getMovieDetail(props.match.params.id);
-        setMovie(movieDetailResult);
-    };
-
     useEffect(() => {
+        
+        const requestMovieDetail = async () => {
+            const movieDetailResult = await MoviesService.getMovieDetail(props.match.params.id);
+            setMovie(movieDetailResult);
+        }
+
         requestMovieDetail();
-    });
+    }, []);
 
     return (
         <>
