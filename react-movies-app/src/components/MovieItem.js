@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
-import { MoviesService } from "../api/MoviesService";
 
 import { addToPlaylist } from '../actions/playlistAction';
 import { useDispatch, useSelector } from 'react-redux';
+import { useMovies } from "./useMovies";
 
 export const MovieItem = () => {
 
-const [movies, setMovies] = useState({ data: { results: [] } });
+const movies = useMovies();
 
 const dispatch = useDispatch();
 const playListReducer = useSelector((state) => state.playlist);
@@ -22,15 +22,6 @@ const removeFromPlaylist = (id) => {
     let list = playListReducer.movies.filter(item => item !== id);
     dispatch(addToPlaylist(list));
 }
-
-const requestMovies = async () => {
-    const moviesResult = await MoviesService.getPopularMovies();
-    setMovies(moviesResult);
-};
-
-useEffect(() => {
-    requestMovies();
-}, []);
 
 return (
 <div className="row" style={{ paddingTop: '10px' }}>
